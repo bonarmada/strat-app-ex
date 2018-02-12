@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Empty state ui-->
+    <LinearLayout
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_lilac"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/ic_popcorn"
+            android:layout_marginBottom="16dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextAppearance.AppCompat.Display2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Nothing selected"
+            android:textColor="@color/magnesium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/top_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cover_photo_height"
+            android:layout_gravity="bottom">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_overlay"
+                android:layout_alignParentBottom="true"
+                android:background="#88000000"></View>
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvGenre"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:paddingHorizontal="16dp"
+                android:text="Genre 1 | Genre 2"
+                android:textColor="@color/textColorWhiteSecondary" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvGenre"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/ivCover"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="16dp"
+                android:text="Movie title is  "
+                android:textColor="@color/textColorWhite" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvRuntime"
+                        style="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="145 Minutes "
+                        android:textColor="@color/textColorPrimary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:maxLines="1"
+                        android:text="@string/cap_runtime"
+                        android:textColor="@color/textColorSecondary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvLanguage"
+                        style="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="English"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:maxLines="1"
+                        android:text="@string/cap_language"
+                        android:textColor="@color/textColorSecondary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvYear"
+                        style="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="1999"
+                        android:textColor="@color/textColorPrimary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:maxLines="1"
+                        android:text="@string/cap_year"
+                        android:textColor="@color/textColorSecondary" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvRating"
+                        style="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="95.23 "
+                        android:textColor="@color/textColorPrimary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:maxLines="1"
+                        android:text="@string/cap_rating"
+                        android:textColor="@color/textColorSecondary" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_marginVertical="12dp"
+                        android:background="@color/white_lilac"
+                        android:layout_height="1dp">
+
+                    </View>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:maxLines="1"
+                        android:text="@string/cap_overview"
+                        android:textColor="@color/textColorSecondary" />
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvOverview"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/cap_bacon_ipsum"
+                        android:textColor="@color/textColorPrimary" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

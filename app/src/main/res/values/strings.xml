@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">strat-app-ex</string>
+    <string name="cap_language">Language</string>
+    <string name="cap_rating">Rating</string>
+    <string name="cap_year">Year</string>
+    <string name="cap_runtime">Runtime</string>
+    <string name="cap_overview">Overview</string>
+
+    <string name="cap_bacon_ipsum">Bacon ipsum dolor amet ham brisket biltong cow sirloin. Meatball andouille ribeye pork belly beef ribs. Flank corned beef prosciutto short ribs alcatra ground round hamburger. Shank alcatra bacon picanha filet mignon, meatloaf ball tip turducken flank andouille cupim salami tongue biltong. Turkey spare ribs capicola flank pork loin fatback tri-tip pork tail jerky biltong alcatra prosciutto kielbasa. Alcatra fatback pancetta jowl, sausage cupim kevin buffalo corned beef pork loin flank t-bone burgdoggen leberkas porchetta. Bacon flank venison porchetta.</string>
+</resources>
